@@ -1,0 +1,15 @@
+{
+    "@symfony\/ux-swup\/controller.d.ts": "\/assets\/@symfony\/ux-swup\/controller.d-4b98d7dabd86b9d52bad30f0d43c12a1.ts",
+    "@symfony\/ux-swup\/controller.js": "\/assets\/@symfony\/ux-swup\/controller-1fed7c787b6e59d377334dede91f3823.js",
+    "app.js": "\/assets\/app-6a3f4166df4302c48d30e8f60562a94a.js",
+    "styles\/app.scss": "\/assets\/styles\/app-39706dc36ebd0f7e75b053bfc083f361.css",
+    "styles\/skeleton-theme\/base\/variables.scss": "\/assets\/styles\/skeleton-theme\/base\/variables-150c4a1fd05267b300630752b83e4d6c.css",
+    "styles\/skeleton-theme\/components\/admonitions.scss": "\/assets\/styles\/skeleton-theme\/components\/admonitions-d0f35c41c567858803e18a08b73fdb60.css",
+    "styles\/skeleton-theme\/components\/chip.scss": "\/assets\/styles\/skeleton-theme\/components\/chip-6ee86197a7920a323493934d6b5f3f09.css",
+    "styles\/skeleton-theme\/components\/code.scss": "\/assets\/styles\/skeleton-theme\/components\/code-bd74877cdd4f1dbc4dc602566fa0ede3.css",
+    "styles\/skeleton-theme\/components\/footer.scss": "\/assets\/styles\/skeleton-theme\/components\/footer-198d2be0c59f0c03338eca354ecac3c1.css",
+    "styles\/skeleton-theme\/components\/header.scss": "\/assets\/styles\/skeleton-theme\/components\/header-a44a0abf3f0f4db9b546686ac3221351.css",
+    "styles\/skeleton-theme\/index.scss": "\/assets\/styles\/skeleton-theme\/index-d802e6725370b5469e0c84683cbaea0e.css",
+    "styles\/skeleton-theme\/pages\/article.scss": "\/assets\/styles\/skeleton-theme\/pages\/article-81e0280db81b5acb7b59050d0f80066a.css",
+    "styles\/skeleton-theme\/pages\/articles.scss": "\/assets\/styles\/skeleton-theme\/pages\/articles-9b3ae1fdea0d64298f95ff2447c9083e.css"
+}
