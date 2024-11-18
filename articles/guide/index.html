@@ -7,14 +7,14 @@
         <title>Guide | Le réseau des Chuats</title>
 
                     <meta name="description" content="Learn more about writing contents with Stenope and this skeleton specificities." />
-            <link rel="canonical" href="https://interclubs-chuats/interclubs-chuats.github.io/articles/guide" />
+            <link rel="canonical" href="https://interclubs-chuats.github.io/articles/guide" />
         
-                    <link rel="stylesheet" href="/interclubs-chuats.github.io/assets/styles/app-39706dc36ebd0f7e75b053bfc083f361.css">
+                    <link rel="stylesheet" href="/assets/styles/app-39706dc36ebd0f7e75b053bfc083f361.css">
             </head>
     <body>
         <div class="container">
                             <header id="nav" class="header">
-    <a href="/interclubs-chuats.github.io/" class="title">
+    <a href="/" class="title">
         <span class="screen-reader">Le réseau des Chuats</span>
     </a>
 
@@ -22,30 +22,23 @@
         <ul>
                                                             <li class="nav__item ">
                     <a
-                        href="/interclubs-chuats.github.io/"
+                        href="/"
                                             >
                                                 <span>Home</span>
                     </a>
                 </li>
                                                             <li class="nav__item nav__item--active">
                     <a
-                        href="/interclubs-chuats.github.io/articles/"
+                        href="/articles/"
                                             >
                                                 <span>Articles</span>
                     </a>
                 </li>
                                                             <li class="nav__item ">
                     <a
-                        href="/interclubs-chuats.github.io/about"
+                        href="/about"
                                             >
                                                 <span>About</span>
-                    </a>
-                </li>
-                                                            <li class="nav__item ">
-                    <a
-                        href="https://stenopephp.github.io/Stenope"
-                        target="_blank"                    >
-                                                <span>Docs</span>
                     </a>
                 </li>
                     </ul>
@@ -55,12 +48,12 @@
             <main>
                     <main class="article">
         <nav>
-            <a href="/interclubs-chuats.github.io/articles/">← Back to the list</a>
+            <a href="/articles/">← Back to the list</a>
         </nav>
 
         <header>
             <div class="banner">
-                <img src="/interclubs-chuats.github.io/resized/content/images/articles/banners/guide.jpg/bdff6e860c20025e0136b94bc4a393ef.jpg" alt="Guide" />
+                <img src="/resized/content/images/articles/banners/guide.jpg/bdff6e860c20025e0136b94bc4a393ef.jpg" alt="Guide" />
             </div>
             <h1>Guide</h1>
         </header>
@@ -124,21 +117,21 @@
 <ul>
 <li>Symfony 6.4 LTS, with AssetMapper component to handle frontend dependencies with no build.</li>
 <li>Sass integration</li>
-<li>Out-of-the-box <a href="/interclubs-chuats.github.io/articles/swup">Swup</a> integration</li>
+<li>Out-of-the-box <a href="/articles/swup">Swup</a> integration</li>
 <li>Glide integration to resize images on the fly from templates</li>
 <li>A Stenope custom processor to automatically resize images in contents with a Glide preset</li>
 <li>Page, Article and Author models, controllers &amp; templates for rendering this documentation and help you discovering the
 way Stenope works.</li>
 <li>a basic 404 error page.</li>
-<li>A basic Github Workflow to <a href="/interclubs-chuats.github.io/./deploy.md">deploy to Github Pages</a></li>
+<li>A basic Github Workflow to <a href="/./deploy.md">deploy to Github Pages</a></li>
 <li>A basic Github Workflow for automated tests and linting</li>
 <li>A catch-all route allowing to expose simple pages from Markdown files in the <code class="code-inline" id="f2dff45f6e72dedba99b3520855ec785">content/pages</code> directory.</li>
 </ul>
 <p>This might be a good start for wiring your own content-based application, but not everything might suit to your needs.<br>
-Consult the <a href="/interclubs-chuats.github.io/articles/clean">« Cleaning the skeleton » article</a> to get an overview of the related files.</p>
+Consult the <a href="/articles/clean">« Cleaning the skeleton » article</a> to get an overview of the related files.</p>
 <h2 id="writing-content">Writing content<a href="#writing-content" class="anchor"></a></h2>
 <h3 id="basic-pages">Basic pages<a href="#basic-pages" class="anchor"></a></h3>
-<p>You can create simple pages from Markdown files in the <code class="code-inline" id="f2dff45f6e72dedba99b3520855ec785">content/pages</code> directory out-of-the box, like the <a href="/interclubs-chuats.github.io/about">About page</a>.</p>
+<p>You can create simple pages from Markdown files in the <code class="code-inline" id="f2dff45f6e72dedba99b3520855ec785">content/pages</code> directory out-of-the box, like the <a href="/about">About page</a>.</p>
 <p>The page will be accessible using the filename in URL. E.g: a <code class="code-inline" id="61935910f09b2d567b04ee5b918456b1">foo/bar.md</code> file will be accessible at <code class="code-inline" id="1df481b1ec67d4d8bec721f521d4937d">/foo/bar</code>.</p>
 <p>Pages are rendered by default using the <code class="code-inline" id="f9fbd1c36383eba41bb21a34c5a39897">page.html.twig</code> template, but each page can have its own.
 E.g: a <code class="code-inline" id="61935910f09b2d567b04ee5b918456b1">foo/bar.md</code> file will use the <code class="code-inline" id="a6c6dd60bd88cd6176afa465df70db0d">foo/bar.html.twig</code> template if it exists.</p>
@@ -195,20 +188,20 @@ table of content:</p>
 <p>Any content managed by Stenope can be referenced from another content page using regular relative Markdown links:</p>
 <pre class="code-multiline language-md"><code class="language-md" id="29bb26667927c4b642918c8e329d0e0f">Discover <span class="token url">[<span class="token content">what is Stenope</span>](<span class="token url">./what-is-stenope.md</span>)</span></code></pre>
 <p>Renders:</p>
-<p>Discover <a href="/interclubs-chuats.github.io/articles/what-is-stenope">what is Stenope</a></p>
+<p>Discover <a href="/articles/what-is-stenope">what is Stenope</a></p>
 <p>See <a href="https://stenopephp.github.io/Stenope/link-contents/" target="_blank">the official documentation about linking contents</a> to learn
 more about the feature and how ton configure it.</p>
 <h2 id="images">Images<a href="#images" class="anchor"></a></h2>
 <h3 id="using-a-relative-path-recommended">Using a relative path (recommended)<a href="#using-a-relative-path-recommended" class="anchor"></a></h3>
 <p>Images are referenced in the Markdown files using the <code class="code-inline" id="cc454d355596a644289603e0979fba15">![alt](path)</code> syntax, where <code class="code-inline" id="d6fe1d0be6347b8ef2427fa629c04485">path</code> is the path to the image file,
 relative to the Markdown file:</p>
-<img src="/interclubs-chuats.github.io/resized/content/images/articles/guide/exemple-image.jpg/fc9309834035327193cb8b151c7379ce.jpg" alt="Exemple image with relative path" title="Exemple image with relative path" srcset="/interclubs-chuats.github.io/resized/content/images/articles/guide/exemple-image.jpg/fc9309834035327193cb8b151c7379ce.jpg 1x,
-/interclubs-chuats.github.io/resized/content/images/articles/guide/exemple-image.jpg/f1659dd62d31ab5b0d8a2a77ace123cf.jpg 2x," id="exemple-image-with-relative-path">
+<img src="/resized/content/images/articles/guide/exemple-image.jpg/fc9309834035327193cb8b151c7379ce.jpg" alt="Exemple image with relative path" title="Exemple image with relative path" srcset="/resized/content/images/articles/guide/exemple-image.jpg/fc9309834035327193cb8b151c7379ce.jpg 1x,
+/resized/content/images/articles/guide/exemple-image.jpg/f1659dd62d31ab5b0d8a2a77ace123cf.jpg 2x," id="exemple-image-with-relative-path">
 <pre class="code-multiline language-md"><code class="language-md" id="3722cd49df6c685d7c2624de20843024"><span class="token url"><span class="token operator">!</span>[<span class="token content">Exemple image with relative path</span>](<span class="token url">./../images/articles/guide/exemple-image.jpg</span>)</span></code></pre>
 <h3 id="using-absolute-path">Using absolute path<a href="#using-absolute-path" class="anchor"></a></h3>
 <p>You can also reference the image using an absolute path, from the root of the project:</p>
-<img src="/interclubs-chuats.github.io/resized/content/images/articles/guide/exemple-image.jpg/fc9309834035327193cb8b151c7379ce.jpg" alt="Exemple image from project root" title="Exemple image from project root" srcset="/interclubs-chuats.github.io/resized/content/images/articles/guide/exemple-image.jpg/fc9309834035327193cb8b151c7379ce.jpg 1x,
-/interclubs-chuats.github.io/resized/content/images/articles/guide/exemple-image.jpg/f1659dd62d31ab5b0d8a2a77ace123cf.jpg 2x," id="exemple-image-from-project-root">
+<img src="/resized/content/images/articles/guide/exemple-image.jpg/fc9309834035327193cb8b151c7379ce.jpg" alt="Exemple image from project root" title="Exemple image from project root" srcset="/resized/content/images/articles/guide/exemple-image.jpg/fc9309834035327193cb8b151c7379ce.jpg 1x,
+/resized/content/images/articles/guide/exemple-image.jpg/f1659dd62d31ab5b0d8a2a77ace123cf.jpg 2x," id="exemple-image-from-project-root">
 <pre class="code-multiline language-md"><code class="language-md" id="ed440905dc6b3be98047f0c0250ee62a"><span class="token url"><span class="token operator">!</span>[<span class="token content">Exemple image from project root</span>](<span class="token url">content/images/articles/guide/exemple-image.jpg</span>)</span></code></pre>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -236,7 +229,7 @@ own processor.</p>
     GIFs cannot be resized by Glide, but can still be referenced.
 </p>
 </div>
-<img src="/interclubs-chuats.github.io/resized/content/images/articles/guide/exemple-gif.gif/9884db197eac83800d6db6556bae0859.gif" alt="Test gif" title="Test gif" id="test-gif">
+<img src="/resized/content/images/articles/guide/exemple-gif.gif/9884db197eac83800d6db6556bae0859.gif" alt="Test gif" title="Test gif" id="test-gif">
 <pre class="code-multiline language-md"><code class="language-md" id="8d5f9b69ca12fcefbaf202970410b6f1"><span class="token url"><span class="token operator">!</span>[<span class="token content">Test gif</span>](<span class="token url">./../images/articles/guide/exemple-gif.gif</span>)</span></code></pre>
 <h3 id="resize-image-in-templates">Resize image in templates<a href="#resize-image-in-templates" class="anchor"></a></h3>
 <p>This starter kit comes with an embedded Glide bundle, which allows you to resize local images in your templates,
@@ -254,10 +247,10 @@ with predefined presets (defined in the <code class="code-inline" id="54883a9bbe
 
         <nav class="row">
             <div class="column">
-                <a href="/interclubs-chuats.github.io/articles/">← Back to the list</a>
+                <a href="/articles/">← Back to the list</a>
             </div>
             <div class="column">
-                                                        <a href="/interclubs-chuats.github.io/articles/write-your-own-contents">
+                                                        <a href="/articles/write-your-own-contents">
                         ➜ Next: « Writing your own contents »
                     </a>
                             </div>
@@ -277,37 +270,23 @@ with predefined presets (defined in the <code class="code-inline" id="54883a9bbe
         <ul>
                             <li>
                     <a
-                        href="/interclubs-chuats.github.io/"
+                        href="/"
                                             >
                         <span>Home</span>
                     </a>
                 </li>
                             <li>
                     <a
-                        href="/interclubs-chuats.github.io/about"
+                        href="/about"
                                             >
                         <span>About</span>
                     </a>
                 </li>
                             <li>
                     <a
-                        href="/interclubs-chuats.github.io/articles/"
+                        href="/articles/"
                                             >
                         <span>Articles</span>
-                    </a>
-                </li>
-                            <li>
-                    <a
-                        href="https://github.com/StenopePHP/stenope"
-                        target="_blank"                    >
-                        <span>Stenope on Github</span>
-                    </a>
-                </li>
-                            <li>
-                    <a
-                        href="https://github.com/StenopePHP/skeleton"
-                        target="_blank"                    >
-                        <span>This skeleton on Github</span>
                     </a>
                 </li>
                     </ul>
