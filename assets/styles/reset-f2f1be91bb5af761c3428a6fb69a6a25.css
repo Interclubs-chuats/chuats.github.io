@@ -1,0 +1,11 @@
+*, *:before, *:after{
+  box-sizing: border-box;
+}
+
+footer, header, nav, section, main{
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
