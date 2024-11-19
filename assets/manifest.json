@@ -1,6 +1,4 @@
 {
-    "@symfony\/ux-swup\/controller.d.ts": "\/assets\/@symfony\/ux-swup\/controller.d-4b98d7dabd86b9d52bad30f0d43c12a1.ts",
-    "@symfony\/ux-swup\/controller.js": "\/assets\/@symfony\/ux-swup\/controller-1fed7c787b6e59d377334dede91f3823.js",
     "app.js": "\/assets\/app-6a3f4166df4302c48d30e8f60562a94a.js",
     "styles\/app.scss": "\/assets\/styles\/app-39706dc36ebd0f7e75b053bfc083f361.css",
     "styles\/skeleton-theme\/base\/variables.scss": "\/assets\/styles\/skeleton-theme\/base\/variables-150c4a1fd05267b300630752b83e4d6c.css",

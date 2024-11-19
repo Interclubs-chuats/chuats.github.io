@@ -83,10 +83,6 @@
                 <a href="#images">Images</a>
 
                             </li>
-                    <li class="table-of-content__item">
-                <a href="#swup">Swup</a>
-
-                            </li>
             </ol>
 
         <article>
@@ -120,19 +116,6 @@ the <code class="code-inline" id="55b5b167120840a9198b5779c9b1de66">config/servi
 <li>reference to <code class="code-inline" id="2156934fa6f40a78a549526c5ab987e2">GlideBundle</code> in <code class="code-inline" id="40fa33b4e89e4613ffa4459314636c07">config/bundles.php</code></li>
 <li>source code in <code class="code-inline" id="64dc9eaed34327aa949a95b7ffca5820">src/Bridge/Glide</code></li>
 </ul>
-<h2 id="swup">Swup<a href="#swup" class="anchor"></a></h2>
-<p>If you don't need the Swup integration, you can remove the <code class="code-inline" id="5d88ba8e567b10fdcf97eb3ac3624c0d">assets/controllers/swup_plugins_controller.js</code> file,
-update <code class="code-inline" id="66c1bb1be81fba286ce73fa5e6c8207b">templates/base.html.twig</code> to remove the <code class="code-inline" id="c077bdcee3192dd0a9074c16b1990544">data-controller="swup-plugins"</code> attribute from the <code class="code-inline" id="841a2d689ad86bd1611447453c22c6fc">body</code> tag:</p>
-<pre class="code-multiline language-diff"><code class="language-diff" id="dcfb4aff7c4dc0dd5a8bb1691108a0e4"><span class="token deleted-sign deleted"><span class="token prefix deleted">-</span><span class="token line">    &lt;body
-</span><span class="token prefix deleted">-</span><span class="token line">        {{ stimulus_controller('swup_plugins')
-</span><span class="token prefix deleted">-</span><span class="token line">         | stimulus_controller('symfony/ux-swup/swup', {
-</span><span class="token prefix deleted">-</span><span class="token line">               // …
-</span><span class="token prefix deleted">-</span><span class="token line">           })
-</span><span class="token prefix deleted">-</span><span class="token line">        }}&gt;
-</span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line">    &lt;body&gt;</span></span></code></pre>
-<p>and run:</p>
-<pre class="code-multiline language-shell"><code class="language-shell" id="a88d8c33471016a5c433c1a5c9011575">symfony <span class="token function">composer</span> remove symfony/ux-swup
-<span class="token function">npm</span> uninstall @swup/debug-plugin @swup/fade-theme @swup/progress-plugin @swup/scroll-plugin @swup/slide-theme</code></pre>
         </article>
 
         <footer>
