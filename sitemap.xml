@@ -2,30 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
             <url>
             <loc>https://interclubs-chuats.github.io/</loc>
-            <lastmod>2024-11-26T05:56:40+00:00</lastmod>            <priority>0</priority>            <changefreq>monthly</changefreq>
+            <lastmod>2024-11-26T06:12:04+00:00</lastmod>            <priority>0</priority>            <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://interclubs-chuats.github.io/classics/abel</loc>
-            <lastmod>2023-03-14T05:56:40+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-03-14T06:12:04+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://interclubs-chuats.github.io/classics/chuats2</loc>
-            <lastmod>2023-03-14T05:56:40+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-03-14T06:12:04+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://interclubs-chuats.github.io/classics/les-deux-gardes</loc>
-            <lastmod>2023-03-14T05:56:40+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-03-14T06:12:04+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://interclubs-chuats.github.io/classics/les-fleurs-blanches</loc>
-            <lastmod>2023-03-14T05:56:40+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-03-14T06:12:04+00:00</lastmod>                        <changefreq>monthly</changefreq>
+        </url>
+            <url>
+            <loc>https://interclubs-chuats.github.io/classics/les-mouchtiques</loc>
+            <lastmod>2023-03-14T06:12:04+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://interclubs-chuats.github.io/classics/travers%C3%A9e-fleurs-blanches-mouchtiques</loc>
-            <lastmod>2023-03-14T05:56:40+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-03-14T06:12:04+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://interclubs-chuats.github.io/topos/travers%C3%A9e-fleurs-blanches-mouchtiques</loc>
-            <lastmod>2024-11-26T05:56:40+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2024-11-26T06:12:05+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
     </urlset>
