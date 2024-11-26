@@ -27,14 +27,12 @@
 
 var transformMatrix = [1, 0, 0, 1, 0, 0];
 
-function addSvgNavigation(svg) {
-  var viewbox = svg.getAttributeNS(null, "viewBox").split(" ");
+function addSvgNavigation(svg, button_plus, button_moins) {
+  var viewbox = svg.getAttributeNS(null, 'viewBox').split(' ');
   var initX = parseFloat(viewbox[0]);
   var initY = parseFloat(viewbox[1]);
-  var centerX = parseFloat(viewbox[2]) / 2;
-  var centerY = parseFloat(viewbox[3]) / 2;
 
-  var matrixGroup = svg.getElementById("viewport");
+  var matrixGroup = svg.getElementById('viewport');
 
   // donne la position de la souris dans les coordonnées du SVG
   function get_position_souris_dans_SVG(evt)
@@ -75,8 +73,8 @@ function addSvgNavigation(svg) {
   {
     transformMatrix[4] += dx;
     transformMatrix[5] += dy;
-    var newMatrix = "matrix(" + transformMatrix.join(' ') + ")";
-    matrixGroup.setAttributeNS(null, "transform", newMatrix);
+    var newMatrix = 'matrix(' + transformMatrix.join(' ') + ')';
+    matrixGroup.setAttributeNS(null, 'transform', newMatrix);
   }
 
   function sur_appui_bouton(evt)
@@ -97,7 +95,7 @@ function addSvgNavigation(svg) {
     }
   }
 
-  function sur_relachement_bouton(evt)
+  function sur_relachement_bouton()
   {
     selectedElement = null;
   }
@@ -112,8 +110,8 @@ function addSvgNavigation(svg) {
     svg.addEventListener('DOMMouseScroll', sur_zoom, false); // Others
 
   // ou bien les boutons + et -
-  button_plus.addEventListener("click", function ()  { zoomIn();  }); // zoom(1.25);
-  button_moins.addEventListener("click", function () { zoomOut(); }); // zoom(0.8);
+  button_plus.addEventListener('click', function ()  { zoomIn();  }); // zoom(1.25);
+  button_moins.addEventListener('click', function () { zoomOut(); }); // zoom(0.8);
 
   // ou bien les deux doigts sur tactile... TODO !
 
@@ -124,7 +122,6 @@ function addSvgNavigation(svg) {
     evt.returnValue = false;
 
     // voir https://adom.as/javascript-mouse-wheel/
-    if (!event) { event = window.event; }                   // IE
     if (evt.wheelDelta) { delta = evt.wheelDelta / 120; }   // IE, Opera, Chrome, Safari
     else if (event.detail) { delta = -evt.detail / 3; }     // Mozilla
     // Voilà, ici notre delta vaut 1 à chaque incrément de molette.

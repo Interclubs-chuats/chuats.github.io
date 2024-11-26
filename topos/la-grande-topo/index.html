@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/assets/styles/topo-84f255e3560df2de62889be1099e84b0.css">
     </head>
     <body>
-            <script rel="script" src="/assets/scripts/svgNavigator-615f6d626167c36a9b80612865e7de20.js"></script>
+            <script rel="script" src="/assets/scripts/svgNavigator-e7104065bc58a41011b3c8c7090f458a.js"></script>
     <script>
         function recadrer_svg()
         {
@@ -23,7 +23,7 @@
             document.getElementById("container_SVG").setAttribute("width", w);
             document.getElementById("container_SVG").setAttribute("height", h);
         }
-
+        button_plus
         function fermer_message()
         {
 
@@ -39,9 +39,12 @@
                 document.getElementById("chargement").style.display = "none";
                 button_ok.style.display = "block";
 
-                var in_svg = container_svg.contentDocument;
+                const in_svg = container_svg.contentDocument;
+                const svg = in_svg.getElementById('my_svg');
+                const button_plus = document.getElementById('button_plus');
+                const button_moins = document.getElementById('button_moins');
 
-                window.addSvgNavigation(in_svg.getElementById('my_svg'))
+                window.addSvgNavigation(svg, button_plus, button_moins)
             });
         }
     </script>
