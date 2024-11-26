@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>La grande topo des Chuats | Le réseau des Chuats</title>
+
+                    <meta name="description" content="Le réseau des Chuats, encore en cours d&#039;exploration, est en grande partie équipé en fixe. Les cordes en place font l&#039;objet d&#039;un suivi rigoureux, et sont changées bénévolement par les spéléos de l&#039;interclubs tous les 200 passages environ." />
+            <link rel="canonical" href="https://interclubs-chuats.github.io/topos/la-grande-topo" />
+        
+        <link rel="stylesheet" href="/assets/styles/reset-f2f1be91bb5af761c3428a6fb69a6a25.css">
+            <link rel="stylesheet" href="/assets/styles/home-a3cf9615f7cf074542111e8b98344fdd.css">
+    <link rel="stylesheet" href="/assets/styles/topo-84f255e3560df2de62889be1099e84b0.css">
+    </head>
+    <body>
+            <script rel="script" src="/assets/scripts/svgNavigator-615f6d626167c36a9b80612865e7de20.js"></script>
+    <script>
+        function recadrer_svg()
+        {
+            var w = window.innerWidth - 20;
+            var h = window.innerHeight - 20;
+            document.getElementById("container_SVG").setAttribute("width", w);
+            document.getElementById("container_SVG").setAttribute("height", h);
+        }
+
+        function fermer_message()
+        {
+
+            // trouver le conteneur du svg parmi la page
+            // sur l'import du svg :
+            // https://github.com/MALTT-STIC/stic-1-svg-with-javascript/tree/master/01-external-svg
+            // https://edutechwiki.unige.ch/fr/SVG_avec_JavaScript
+            var container_svg = document.getElementById("container_SVG");
+
+            //comme le svg est un document externe, il faut attendre qu'il soit chargé avant de lui associer un listener
+            container_svg.addEventListener("load", function ()
+            {
+                document.getElementById("chargement").style.display = "none";
+                button_ok.style.display = "block";
+
+                var in_svg = container_svg.contentDocument;
+
+                window.addSvgNavigation(in_svg.getElementById('my_svg'))
+            });
+        }
+    </script>
+
+            <body>
+        <!-- MESSAGE DE BIENVENUE ET D'AVERTISSEMENT -->
+        <div id="modale_avertissement_topo" class="modal" style="display:block;">
+
+            <div class="modal-content animate" action="" method="post"
+                 style="display: flex; flex-direction: column; align-items: center; padding: 10px;">
+
+                <p style="text-align:center">
+                    <b>La grande topo des Chuats</b><br/>
+                    <br/>
+
+                    Bienvenue aux Chuats !<br/>
+                    <br/>
+                    Cette topographie est le résultat du travail de plus d'une centaine de spéléos de l'interclubs Chuats.<br/><br/>
+                    Elle est mise à votre disposition sous condition d'en respecter
+                    <a href="" target="_blank"><b>la licence</b></a>.<br/>
+                    <br/>
+
+                    <br/>
+                    <b>Si vous utilisez nos cordes</b> :<br/>
+                    <br/>
+                    merci de le <a href="" target="_blank"><b>signaler à l'interclubs</b></a><br/>
+                    <br/>
+                    merci de <a href="" target="_blank"><b>faire un don</b></a> pour participer<br/>
+                    à l'usure des cordes ;+)<br/>
+                </p>
+
+                <!--SOIT AFFICHE LE SABLIER QUI CHARGE-->
+                <div id="chargement" style="display: flex; flex-direction: column; align-items: center; height: 100px;">
+                    <div class="spinner"></div>
+                    Chargement en cours...
+                </div>
+
+                <!--SOIT AFFICHE LE BOUTON OK QUAND C'EST CHARGÉ-->
+                <div id ="button_ok" style="display: none; height: 100px;">
+                    <button
+                        onclick="document.getElementById('modale_avertissement_topo').style.display = 'none'"
+                        style="width:200px; background-color: #6699cc; "><b>OK</b>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!--  BOUTONS DE NAVIGATION -->
+        <div id="menu_bar" style="display: flex; flex-direction: row;
+                     position: absolute; /* permet de superposer le bouton au svg */
+                     top : 10px; left:20px;">
+            <div style="display: flex; flex-direction: column;">
+                <button id="button_plus" class="zoom_button" title="Zoomer">+</button>
+                <button id="button_moins" class="zoom_button" title="Dezoomer">-</button>
+            </div>
+        </div>
+
+        <!-- LE SVG -->
+        <object type="image/svg+xml" data="/assets/images/topos/Grande_Topo_Chuats-aadd1587e712690c3bf9b2be95e7bf4c.svg" border="1" id="container_SVG"></object>
+    </body>
+
+    <!-- APPEL DES FONCTIONS ASYNCHRONES -->
+    <script>recadrer_svg();</script>
+    <script>fermer_message();</script>
+    </body>
+</html>
