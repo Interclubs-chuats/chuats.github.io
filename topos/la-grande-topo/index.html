@@ -14,16 +14,16 @@
     <link rel="stylesheet" href="/assets/styles/topo-84f255e3560df2de62889be1099e84b0.css">
     </head>
     <body>
-            <script rel="script" src="/assets/scripts/svgNavigator-e7104065bc58a41011b3c8c7090f458a.js"></script>
+            <script rel="script" src="/assets/scripts/svg-pan-zoom.min-d6361d73979851803b50b614e6e7d9ac.js"></script>
     <script>
         function recadrer_svg()
         {
-            var w = window.innerWidth - 20;
-            var h = window.innerHeight - 20;
+            const w = window.innerWidth - 20;
+            const h = window.innerHeight - 20;
             document.getElementById("container_SVG").setAttribute("width", w);
             document.getElementById("container_SVG").setAttribute("height", h);
         }
-        button_plus
+
         function fermer_message()
         {
 
@@ -31,20 +31,26 @@
             // sur l'import du svg :
             // https://github.com/MALTT-STIC/stic-1-svg-with-javascript/tree/master/01-external-svg
             // https://edutechwiki.unige.ch/fr/SVG_avec_JavaScript
-            var container_svg = document.getElementById("container_SVG");
+            const container_svg = document.getElementById("container_SVG");
 
             //comme le svg est un document externe, il faut attendre qu'il soit chargé avant de lui associer un listener
             container_svg.addEventListener("load", function ()
             {
                 document.getElementById("chargement").style.display = "none";
-                button_ok.style.display = "block";
+                document.getElementById("button_ok").style.display = "block";
 
-                const in_svg = container_svg.contentDocument;
-                const svg = in_svg.getElementById('my_svg');
-                const button_plus = document.getElementById('button_plus');
-                const button_moins = document.getElementById('button_moins');
+                const panZoom = svgPanZoom("#container_SVG", {
+                    minZoom: 0.2
+                });
 
-                window.addSvgNavigation(svg, button_plus, button_moins)
+                document.getElementById('button_moins').addEventListener('click', function(ev){
+                    ev.preventDefault()
+                    panZoom.zoomOut()
+                });
+                document.getElementById('button_plus').addEventListener('click', function(ev){
+                    ev.preventDefault()
+                    panZoom.zoomIn()
+                });
             });
         }
     </script>
