@@ -49,7 +49,7 @@
 
                         // Init custom events handler
                         , init: function(options) {
-                            const instance = options.instance
+                            let instance = options.instance
                                 , initialScale = 1
                                 , pannedX = 0
                                 , pannedY = 0
@@ -66,6 +66,20 @@
                             // Handle double tap
                             this.hammer.on('doubletap', function(ev){
                                 instance.zoomIn()
+                            })
+
+                            // Handle pan
+                            this.hammer.on('panstart panmove', function(ev){
+                                // On pan start reset panned variables
+                                if (ev.type === 'panstart') {
+                                    pannedX = 0
+                                    pannedY = 0
+                                }
+
+                                // Pan only the difference
+                                instance.panBy({x: ev.deltaX - pannedX, y: ev.deltaY - pannedY})
+                                pannedX = ev.deltaX
+                                pannedY = ev.deltaY
                             })
 
                             // Handle pinch
